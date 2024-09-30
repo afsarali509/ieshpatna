@@ -1904,64 +1904,6 @@ Affiliated to International Safety Professionals Association - USA
 
 <script>
     $(function() {
-        $('#popup_form').on('submit', function(e) {
-            e.preventDefault();
-            $.ajax({
-                type: 'post',
-                dataType: 'json',
-                url: 'https://www.iehsacademy.com/view/footer_enquiry',
-                data: $('#popup_form').serialize(),
-                success: function(response) {
-                    // console.log(response);
-                    if (response.msg == 'success') {
-                        //   alert('came');
-                        $('#email_error1').hide();
-                        $('#email_success1').show();
-                        $('#email_success1').html(response.text);
-                        $("#popup_form")[0].reset();
-                    }
-                    if (response.msg == 'error') {
-                        $('#email_success1').hide();
-                        $('#email_error1').show();
-                        $('#email_error1').html(response.text);
-                    }
-                }
-            });
-        });
-    });
-</script>
-
-<script>
-    $(function() {
-        $('#footer_form').on('submit', function(e) {
-            e.preventDefault();
-            $.ajax({
-                type: 'post',
-                dataType: 'json',
-                url: 'https://www.iehsacademy.com/view/contact_enquiry',
-                data: $('#footer_form').serialize(),
-                success: function(response) {
-                    // console.log(response);
-                    if (response.msg == 'success') {
-                        //   alert('came');
-                        $('#email_error').hide();
-                        $('#email_success').show();
-                        $('#email_success').html(response.text);
-                        $("#footer_form")[0].reset();
-                    }
-                    if (response.msg == 'error') {
-                        $('#email_success').hide();
-                        $('#email_error').show();
-                        $('#email_error').html(response.text);
-                    }
-                }
-            });
-        });
-    });
-</script>
-
-<script>
-    $(function() {
         // Setup form validation on the #register-form element
         $("#payment_form").validate({
             // Specify the validation rules
