@@ -158,7 +158,7 @@
                                 <!--<span>Call Us</span>-->
                                 <ul class="pl-0 mb-0">
                                     <li><strong><a href="https://wa.me/+91 94 9444 1108" target="_blank">+91 94 9444 1108</a></strong></li>
-                                    <li><strong><a href="tel:+91 89 1973 6085">+91 89 1973 6085</a></strong></li>
+                                    <li><strong><a href="tel:+91 78 7077 7960">+91 78 7077 7960</a></strong></li>
                                 </ul>
                             </div>
                         </div>
@@ -1588,64 +1588,6 @@ Affiliated to International Safety Professionals Association - USA
 
 <script>
     $(function() {
-        $('#popup_form').on('submit', function(e) {
-            e.preventDefault();
-            $.ajax({
-                type: 'post',
-                dataType: 'json',
-                url: 'https://www.iehsacademy.com/view/footer_enquiry',
-                data: $('#popup_form').serialize(),
-                success: function(response) {
-                    // console.log(response);
-                    if (response.msg == 'success') {
-                        //   alert('came');
-                        $('#email_error1').hide();
-                        $('#email_success1').show();
-                        $('#email_success1').html(response.text);
-                        $("#popup_form")[0].reset();
-                    }
-                    if (response.msg == 'error') {
-                        $('#email_success1').hide();
-                        $('#email_error1').show();
-                        $('#email_error1').html(response.text);
-                    }
-                }
-            });
-        });
-    });
-</script>
-
-<script>
-    $(function() {
-        $('#footer_form').on('submit', function(e) {
-            e.preventDefault();
-            $.ajax({
-                type: 'post',
-                dataType: 'json',
-                url: 'https://www.iehsacademy.com/view/contact_enquiry',
-                data: $('#footer_form').serialize(),
-                success: function(response) {
-                    // console.log(response);
-                    if (response.msg == 'success') {
-                        //   alert('came');
-                        $('#email_error').hide();
-                        $('#email_success').show();
-                        $('#email_success').html(response.text);
-                        $("#footer_form")[0].reset();
-                    }
-                    if (response.msg == 'error') {
-                        $('#email_success').hide();
-                        $('#email_error').show();
-                        $('#email_error').html(response.text);
-                    }
-                }
-            });
-        });
-    });
-</script>
-
-<script>
-    $(function() {
         // Setup form validation on the #register-form element
         $("#payment_form").validate({
             // Specify the validation rules
@@ -1694,8 +1636,8 @@ Affiliated to International Safety Professionals Association - USA
     <div id="custom_html-8" class="widget_text widget fwidget et_pb_widget widget_custom_html">
         <div class="textwidget custom-html-widget">
             <div class="fixed-link">
-                <div class="link-btn btn-one"><a href="#" data-toggle="modal" data-target="#Login"><span class="icon-img icon-img-one"></span><span class="icon-text">Enquiry</span></a></div>
-                <div class="link-btn btn-three d-lg-none"><a href="tel:+91 89 1973 6085"><span class="icon-img icon-img-three fal fa-mobile-android"></span><span class="icon-text">Call Us</span></a></div>
+                 
+                <div class="link-btn btn-three d-lg-none"><a href="tel:+91 78 7077 7960"><span class="icon-img icon-img-three fal fa-mobile-android"></span><span class="icon-text">Call Us</span></a></div>
                 <!--<div class="link-btn btn-two"><a href="https://form.jotform.com/220493050820446"><span class="icon-img icon-img-two"></span><span class="icon-text">E-Apply</span></a></div>-->
             </div>
         </div>
